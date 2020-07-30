@@ -1,0 +1,32 @@
+name: ${project.name}
+main: ${project.groupId}.${project.artifactId}
+version: ${project.version}
+author: ${project.author}
+depend: [MassiveCore]
+permissions:
+  captcha.basecommand: {description: captcha base command, default: false}
+  captcha.bypass: {description: toggle bypass mode, default: false}
+  captcha.complete: {description: attempt to complete the captcha, default: false}
+  captcha.config: {description: edit the captcha config, default: false}
+  captcha.version: {description: see plugin version, default: false}
+  captcha.*:
+    children:
+      captcha.basecommand: true
+      captcha.bypass: true
+      captcha.complete: true
+      captcha.config: true
+      captcha.version: true
+  captcha.kit.op:
+    default: op
+    children:
+      captcha.*: true
+  captcha.kit.rank0:
+    default: false
+    children:
+      captcha.basecommand: true
+      captcha.complete: true
+      captcha.version: true
+  captcha.kit.default:
+    default: true
+    children:
+      captcha.kit.rank0: true
