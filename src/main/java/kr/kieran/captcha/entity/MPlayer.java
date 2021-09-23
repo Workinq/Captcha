@@ -2,11 +2,10 @@ package kr.kieran.captcha.entity;
 
 import com.massivecraft.massivecore.store.SenderEntity;
 import com.massivecraft.massivecore.util.MUtil;
-import kr.kieran.captcha.CaptchaParticipator;
 import kr.kieran.captcha.Perm;
 import kr.kieran.captcha.entity.object.Captcha;
 
-public class MPlayer extends SenderEntity<MPlayer> implements CaptchaParticipator
+public class MPlayer extends SenderEntity<MPlayer>
 {
 
     // -------------------------------------------- //
